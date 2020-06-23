@@ -17,7 +17,7 @@ int main(void){
     q.enqueue(20);
     q.enqueue(25);
     
-    while(q.getSize())
+    while(!q.isEmpty())
         cout << q.dequeue() << endl;
 
     cout << endl;
