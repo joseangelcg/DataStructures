@@ -1,5 +1,7 @@
 #include "Queue/queue.h"
 #include "Stack/stack.h"
+#include "SLinkedList/SLinkedList.h"
+
 #include <iostream>
 #include <string>
 
@@ -12,6 +14,8 @@ int main(void){
     Queue<double> q2;
     Stack<string> st;
     
+    SLinkedList<int> list;
+
     q.enqueue(5);
     q.enqueue(10);
     q.enqueue(15);
@@ -42,9 +46,23 @@ int main(void){
     
     while(st.getSize())
     {
-        cout << st.top() << endl;
         cout << st.pop() << endl;
     }
+    cout << endl;
+
+    list.Insert(10);
+    list.Insert(27);
+    list.append(39);
+    list.append(84);
+
+    list.print();
+
+    list.Delete(84);
+    list.Delete(27);
+    list.append(30);
+    
+    list.print();
+
     return 0;
 }
 
