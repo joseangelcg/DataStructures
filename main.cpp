@@ -1,4 +1,5 @@
 #include "Queue/queue.h"
+#include "Stack/stack.h"
 #include <iostream>
 #include <string>
 
@@ -9,7 +10,7 @@ int main(void){
 
     Queue<int> q;
     Queue<double> q2;
-    Queue<string> qs;
+    Stack<string> st;
     
     q.enqueue(5);
     q.enqueue(10);
@@ -33,14 +34,17 @@ int main(void){
 
     cout << endl;
 
-    qs.enqueue("Holi");
-    qs.enqueue("Este es");
-    qs.enqueue("Un mensaje");
-    qs.enqueue("Del futuro");
-    qs.enqueue("Adios");
+    st.push("Holi");
+    st.push("Este es");
+    st.push("Un mensaje");
+    st.push("Del futuro");
+    st.push("Adios");
     
-    while(qs.getSize())
-        cout << qs.dequeue() << endl;
+    while(st.getSize())
+    {
+        cout << st.top() << endl;
+        cout << st.pop() << endl;
+    }
     return 0;
 }
 
