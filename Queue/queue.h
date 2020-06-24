@@ -2,7 +2,7 @@
 #define QUEUE_H_
 
 #include <iostream>
-#include "prv/data_node.h"
+#include "../prv/data_node.h"
 
 /*Queue class*/
 template <class T>
