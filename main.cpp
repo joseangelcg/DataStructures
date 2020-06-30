@@ -1,6 +1,7 @@
 #include "Queue/queue.h"
 #include "Stack/stack.h"
 #include "SLinkedList/SLinkedList.h"
+#include "DLinkedList/DLinkedList.h"
 
 #include <iostream>
 #include <string>
@@ -15,6 +16,7 @@ int main(void){
     Stack<string> st;
     
     SLinkedList<int> list;
+    DLinkedList<string> Dlist;
 
     q.enqueue(5);
     q.enqueue(10);
@@ -62,6 +64,19 @@ int main(void){
     list.append(30);
     
     list.print();
+
+    Dlist.Insert("Aloha");
+    Dlist.Insert("Bonjour");
+    Dlist.append("Ciao");
+    Dlist.append("Donas");
+
+    Dlist.print();
+
+    Dlist.Delete("Bonjour");
+    Dlist.Delete("Donas");
+    Dlist.append("Goal");
+    
+    Dlist.print();
 
     return 0;
 }
