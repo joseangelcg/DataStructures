@@ -2,7 +2,7 @@
 #define STACK_H_
 
 #include <iostream>
-#include "prv/data_node.h"
+#include "../prv/data_node.h"
 
 /*Stack class*/
 template <class T>
